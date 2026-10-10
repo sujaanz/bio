@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuJaan - Link Bio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/Avatar.jpg">
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" content="Explore my portfolio, YouTube channels, and connect with me across all social platforms!">
+    <meta property="og:title" content="SuJaan - Link Bio | @sujaanz">
+    <meta property="og:description" content="Explore my portfolio, YouTube channels, and connect with me across all social platforms!">
+    <meta property="og:image" content="https://sujaanz.github.io/bio/images/Thumbnail.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://sujaanz.github.io/bio/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SuJaan - Link Bio | @sujaanz">
+    <meta name="twitter:description" content="Explore my portfolio, YouTube channels, and connect with me across all social platforms!">
+    <meta name="twitter:image" content="https://sujaanz.github.io/bio/images/Thumbnail.png">
+    
+    <!-- External Resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Splash Screen Preloader -->
+    <div id="preloader">
+        <div class="loader-logo">&lt;/&gt;</div>
+    </div>
+
+    <!-- Background Textures & Effects -->
+    <div class="noise-bg"></div>
+    <div class="glow-bg"></div>
+
+    <!-- Main Centered Wrapper -->
+    <div class="container">
+        <!-- Theme Controller -->
+        <div class="theme-toggle" id="themeToggle" data-tooltip="Switch Theme">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </div>
+
+        <!-- Profile Header Section -->
+        <div class="profile-container">
+            <div class="neon-ring"></div>
+            <img src="images/Avatar.jpg" alt="Profile Picture" class="profile-img">
+        </div>
+        
+        <h1 class="username">@sujaanz</h1>
+        
+        <!-- Typewriter Bio -->
+        <div class="bio-container">
+            <p class="bio-title"><span id="typed-text"></span><span class="cursor">|</span></p>
+        </div>
+
+        <!-- Social Navigation -->
+        <div class="social-icons">
+            <a href="https://github.com/sujaanz" target="_blank" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sksujaanmondal" target="_blank" data-tooltip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/sujaanz" target="_blank" data-tooltip="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/SkSujaanMondal" target="_blank" data-tooltip="X (Twitter)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+            </a>
+            <a href="https://youtube.com/@hirotohub" target="_blank" data-tooltip="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Link Cards Directory -->
+        <div class="links-container">
+            <!-- Link 1: Portfolio -->
+            <a href="https://sujaanz.github.io/" class="link-card" target="_blank">
+                <div class="link-left">
+                    <div class="link-icon-box" style="color: #6366f1;"><i class="fas fa-code"></i></div>
+                    <div class="link-info">
+                        <h3>Explore My Portfolio</h3>
+                        <p>See what I've built so far 🚀</p>
+                    </div>
+                </div>
+                <div class="action-badge">Visit</div>
+            </a>
+
+            <!-- Link 2: Shorts Channel -->
+            <a href="https://youtube.com/shorts/FkdZmp23R48?" class="link-card" target="_blank">
+                <div class="link-left">
+                    <div class="link-icon-box" style="color: #ef4444;"><i class="fab fa-youtube"></i></div>
+                    <div class="link-info">
+                        <h3>Bike Riding Shorts</h3>
+                        <p>HirotoHub · 31 Subscribers</p>
+                    </div>
+                </div>
+                <div class="action-badge">Watch</div>
+            </a>
+
+            <!-- Link 3: Main Channel -->
+            <a href="https://youtube.com/@tobii.x" class="link-card" target="_blank">
+                <div class="link-left">
+                    <div class="link-icon-box" style="color: #ef4444;"><i class="fab fa-youtube"></i></div>
+                    <div class="link-info">
+                        <h3>Main YouTube Channel</h3>
+                        <p>Tobii.x · 7.1K Subscribers</p>
+                    </div>
+                </div>
+                <div class="action-badge">Explore</div>
+            </a>
+
+            <!-- Share Action -->
+            <div class="link-card share-card" onclick="shareProfile()">
+                <div class="link-left">
+                    <div class="link-icon-box" style="color: #10b981;"><i class="fas fa-share-alt"></i></div>
+                    <div class="link-info">
+                        <h3>Share My Profile</h3>
+                        <p>Spread this link with your friends ✨</p>
+                    </div>
+                </div>
+                <div class="action-badge">Share</div>
+            </div>
+
+            <!-- Global Visitor Statistics -->
+            <div class="visitor-counter-box">
+                <i class="fas fa-eye"></i> Total Profile Visits: <span id="visit-count">Loading...</span>
+            </div>
+
+            <!-- Integrated Audio Interface -->
+            <div class="music-widget-wrapper">
+                <div class="music-visualizer-box">
+                    <div class="visualizer-icon"><i class="fab fa-spotify"></i></div>
+                    <div class="visualizer">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <p>Now Vibing</p>
+                </div>
+                <div class="spotify-box">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3QcbhbPujvJbEaRPSiYF3N?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Identity -->
+    <div class="footer-credit">
+        Designed with ♥ by SuJaan
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
